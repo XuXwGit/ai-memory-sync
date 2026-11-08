@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "kind",
+    "source_account",
+    "source_platform",
+    "updated_at",
+    "scope",
+    "provenance",
+    "explicit",
+    "data"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,119}$"
+    },
+    "kind": {
+      "const": "task"
+    },
+    "source_account": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,63}$"
+    },
+    "source_platform": {
+      "type": "string",
+      "minLength": 1
+    },
+    "updated_at": {
+      "anyOf": [
+        {
+          "type": "string",
+          "format": "date-time"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "scope": {
+      "enum": [
+        "shared",
+        "account_only"
+      ]
+    },
+    "provenance": {
+      "type": "string",
+      "minLength": 1
+    },
+    "explicit": {
+      "type": "boolean"
+    },
+    "data": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "title",
+        "status",
+        "next_step"
+      ],
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "todo",
+            "in_progress",
+            "blocked",
+            "done",
+            "cancelled"
+          ]
+        },
+        "next_step": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

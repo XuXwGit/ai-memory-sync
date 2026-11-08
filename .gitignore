@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+.env*
+!\.env.example
+private-data/
+exports/
+vault/
+local-state/
+*.key
+*.pem

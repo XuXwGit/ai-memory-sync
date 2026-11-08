@@ -1,0 +1,47 @@
+{
+  "automations_enabled": false,
+  "credentials_transferred": false,
+  "destination": "demo-account-b",
+  "excluded_count": 1,
+  "included_count": 5,
+  "items": [
+    {
+      "action": "reference_context_only",
+      "id": "demo-memory-1",
+      "kind": "memory",
+      "source_account": "demo-account-a"
+    },
+    {
+      "action": "reference_context_only",
+      "id": "demo-project-1",
+      "kind": "project",
+      "source_account": "demo-account-a"
+    },
+    {
+      "action": "reference_context_only",
+      "id": "demo-task-1",
+      "kind": "task",
+      "source_account": "demo-account-a"
+    },
+    {
+      "action": "reference_context_only",
+      "id": "demo-config-1",
+      "kind": "config",
+      "source_account": "demo-account-a"
+    },
+    {
+      "action": "reference_context_only",
+      "id": "demo-automation-1",
+      "kind": "automation",
+      "source_account": "demo-account-a"
+    }
+  ],
+  "native_import_verified": false,
+  "requires": [
+    "destination authorization",
+    "content review",
+    "platform capability check"
+  ],
+  "status": "preview_only",
+  "warning": "Preview does not filter the source package. Do not share the package as a selected subset."
+}

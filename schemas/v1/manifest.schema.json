@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "format_version",
+    "producer_version",
+    "file",
+    "sha256",
+    "record_count",
+    "coverage",
+    "exclusions",
+    "restore_mode",
+    "native_import_verified",
+    "privacy_review",
+    "scan_status"
+  ],
+  "properties": {
+    "format_version": {
+      "const": "1.0"
+    },
+    "producer_version": {
+      "type": "string"
+    },
+    "file": {
+      "const": "records.json"
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "record_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "coverage": {
+      "const": "selected_records_only"
+    },
+    "exclusions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "restore_mode": {
+      "const": "reference_context"
+    },
+    "native_import_verified": {
+      "const": false
+    },
+    "privacy_review": {
+      "const": "required"
+    },
+    "scan_status": {
+      "const": "no_heuristic_findings_not_a_guarantee"
+    }
+  }
+}

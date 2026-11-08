@@ -1,0 +1,101 @@
+[
+  {
+    "id": "demo-memory-1",
+    "kind": "memory",
+    "source_account": "demo-account-a",
+    "source_platform": "synthetic",
+    "updated_at": "2026-11-07T00:00:00Z",
+    "scope": "shared",
+    "provenance": "synthetic fixture; no real user data",
+    "explicit": true,
+    "data": {
+      "text": "虚构体验用户偏好中文、简洁回复。",
+      "category": "preference"
+    }
+  },
+  {
+    "id": "demo-project-1",
+    "kind": "project",
+    "source_account": "demo-account-a",
+    "source_platform": "synthetic",
+    "updated_at": "2026-11-07T00:00:00Z",
+    "scope": "shared",
+    "provenance": "synthetic fixture; no real user data",
+    "explicit": true,
+    "data": {
+      "title": "演示项目：旅行清单",
+      "status": "active",
+      "summary": "虚构数据，用于验证迁移。"
+    }
+  },
+  {
+    "id": "demo-task-1",
+    "kind": "task",
+    "source_account": "demo-account-a",
+    "source_platform": "synthetic",
+    "updated_at": "2026-11-07T00:00:00Z",
+    "scope": "shared",
+    "provenance": "synthetic fixture; no real user data",
+    "explicit": true,
+    "data": {
+      "title": "整理周末出行清单",
+      "status": "todo",
+      "next_step": "先列出必需品；不要预订或付款。"
+    }
+  },
+  {
+    "id": "demo-conversation-1",
+    "kind": "conversation",
+    "source_account": "demo-account-a",
+    "source_platform": "synthetic",
+    "updated_at": "2026-11-07T00:00:00Z",
+    "scope": "account_only",
+    "provenance": "synthetic fixture; no real user data",
+    "explicit": true,
+    "data": {
+      "representation": "summary",
+      "messages": [
+        {
+          "role": "user",
+          "text": "这是演示会话摘要，不代表完整原始历史。"
+        }
+      ]
+    }
+  },
+  {
+    "id": "demo-config-1",
+    "kind": "config",
+    "source_account": "demo-account-a",
+    "source_platform": "synthetic",
+    "updated_at": "2026-11-07T00:00:00Z",
+    "scope": "shared",
+    "provenance": "synthetic fixture; no real user data",
+    "explicit": true,
+    "data": {
+      "category": "assistant",
+      "description": "虚构的沟通配置",
+      "settings": {
+        "language": "zh-CN",
+        "tone": "concise"
+      },
+      "requires_reauthorization": false
+    }
+  },
+  {
+    "id": "demo-automation-1",
+    "kind": "automation",
+    "source_account": "demo-account-a",
+    "source_platform": "synthetic",
+    "updated_at": "2026-11-07T00:00:00Z",
+    "scope": "shared",
+    "provenance": "synthetic fixture; no real user data",
+    "explicit": true,
+    "data": {
+      "title": "演示每日清单提醒",
+      "schedule": "04:00 daily",
+      "timezone": "Asia/Shanghai",
+      "enabled_on_destination": false,
+      "requires_reauthorization": true
+    }
+  }
+]

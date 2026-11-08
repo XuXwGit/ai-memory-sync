@@ -1,0 +1,15 @@
+{
+  "coverage": "selected_records_only",
+  "exclusions": [
+    "hidden_platform_state"
+  ],
+  "file": "records.json",
+  "format_version": "1.0",
+  "native_import_verified": false,
+  "privacy_review": "required",
+  "producer_version": "0.1.0",
+  "record_count": 6,
+  "restore_mode": "reference_context",
+  "scan_status": "no_heuristic_findings_not_a_guarantee",
+  "sha256": "95ea58d6ca3eb55e4ab83d44dccbd36499d872058828897590a570c83ede9760"
+}

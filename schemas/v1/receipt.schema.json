@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "status",
+    "destination",
+    "included_count",
+    "excluded_count",
+    "native_import_verified",
+    "items",
+    "requires",
+    "automations_enabled",
+    "credentials_transferred",
+    "warning"
+  ],
+  "properties": {
+    "status": {
+      "const": "preview_only"
+    },
+    "destination": {
+      "type": "string"
+    },
+    "included_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "excluded_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "native_import_verified": {
+      "const": false
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "source_account",
+          "kind",
+          "action"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "source_account": {
+            "type": "string"
+          },
+          "kind": {
+            "enum": [
+              "memory",
+              "project",
+              "task",
+              "conversation",
+              "config",
+              "automation"
+            ]
+          },
+          "action": {
+            "const": "reference_context_only"
+          }
+        }
+      }
+    },
+    "requires": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "automations_enabled": {
+      "const": false
+    },
+    "credentials_transferred": {
+      "const": false
+    },
+    "warning": {
+      "type": "string"
+    }
+  }
+}
